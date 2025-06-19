@@ -1,0 +1,16 @@
+<form id="frm2" name="cmdbFormList" method="post" action="{{ url_for('adhoc.get_dod_results') }}">
+    <input type="hidden" name="searchfrmId" id="searchfrmId" value="{{ report_id }}">
+    <div class="dodBoxes ui-corner-all">
+        <div class="dodBoxTitle ui-corner-all" style="float:left;">Search Criteria:</div>
+        <br><br>
+        <label for="search_item">Search Item:</label>
+        <input type="text" id="search_item" name="search_item" />
+        <select name="match_condition" id="match_condition">
+            <option value="starts with">starts with</option>
+            <option value="equals">equals</option>
+            <option value="contains">contains</option>
+        </select>
+        <br><br>
+        <button type="submit">Execute Report</button>
+    </div>
+</form>
